@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="utf-8">
+    <head:meta></head:meta>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap RTL Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.2.0-rc2/css/bootstrap-rtl.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-clean-blog/1.0.4/css/clean-blog.min.css" rel="stylesheet">
+
+    <link href="https://cdn.rawgit.com/rastikerdar/samim-font/master/dist/font-face.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic">
+
+
+    <head:style></head:style>
+    <head:script></head:script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar">
+            <box:menu>
+                <ul class="nav navbar-nav navbar">
+                    <view:menu>
+                        <li>
+                            <a href="(*menu_item_link*)">(*menu_item_title*)</a>
+                        </li>
+                    </view:menu>
+									      <li>
+                          <a href="#target-content">دسته‌بندی‌ها</a>
+                        </li>
+												<li>
+													<a href="#target-content2">آمار</a>
+												</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <!--<li><a href="http://telegram.me/mmnaderi">Telegram</a></li>-->
+                    <li><a href="https://www.instagram.com/mmnaderi.ir">Insta</a></li>
+                    <li><a href="https://github.com/mmnaderi">Github</a></li>
+										<li><a href="http://mmnaderi.ir">Me</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </box:menu>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<box:post_list>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" id="header" style="background-size: 100% auto;background:linear-gradient(rgba(44, 62, 80,.5), rgba(44, 62, 80,.5)), url('http://bayanbox.ir/view/2910016263903989039/default-bg-2.jpg') no-repeat fixed bottom;background-size:cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>(*blog_title*)</h1>
+                        <hr class="small">
+                        <span class="subheading">(*blog_short_description*)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+					<check:if post_list_title>
+						<div style="margin-bottom:3rem" class="text-center">
+									<h4>(*post_list_title*)</h4>
+						</div>
+					</check:if>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <view:post_list>
+									<div class="post-preview" style="background:linear-gradient(rgba(44, 62, 80,.6), rgba(44, 62, 80,.6)), url('(*post_image*)');">
+											<a class="post" href="(*post_link*)">
+                            <h2 class="post-title">
+                                (*post_title*)
+                            </h2>
+                        <div class="post-meta">
+                            نوشته‌شده در (*post_date format="%B"*) (*post_date format="%Y"*) |
+                            (*post_comment_count*) دیدگاه |
+                            (*post_visits*) نفر این مطلب را دیده‌اند.
+                        </div>
+											</a>
+											     <box:post_rating>
+                                <div class="rate">
+                                    <a class="up (*user_rated_up*)" href="(*rate_up_link*)"><i class="heart"></i>(*up_rates*)</a>
+                                </div>
+                            </box:post_rating>
+										<img class="rssimg" src="(*post_image*)">
+                    </div>
+                    <hr>
+                </view:post_list>
+								<div class="telegram_bot">
+									<img src="http://bayanbox.ir/view/7805432404463654967/messaging.gif">
+									می‌خواهید پست‌های جدید را در تلگرام به شما اطلاع دهیم؟
+									<a href="http://telegram.me/mmnaderiblog_bot">@mmnaderiblog_bot</a>
+							</div>
+            </div>
+        </div>
+    </div>
+</box:post_list>
+
+
+
+
+<box:post_detail>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+	<check:if post_image>
+    <header class="intro-header" id="header" style="background:linear-gradient(rgba(44, 62, 80,.5), rgba(44, 62, 80,.5)), url('(*post_image*)') no-repeat fixed bottom;background-size:cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>(*post_title*)</h1>
+                        <!--<h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
+                        <span class="meta">نوشته‌شده در (*post_date*)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	</check:if>
+		<check:if not post_image>
+    <header class="intro-header" id="header" style="background:linear-gradient(rgba(44, 62, 80,.5), rgba(44, 62, 80,.5)), url('http://bayanbox.ir/view/2910016263903989039/default-bg-2.jpg') no-repeat fixed bottom;background-size:cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>(*post_title*)</h1>
+                        <!--<h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
+                        <span class="meta">نوشته‌شده در (*post_date*)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	</check:if>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-content">
+                (*post_full_content*)
+							</div>
+							<div class="tags">
+								<box:post_tags>
+									<view:post_tags>
+									<a href="(*tag_link*)" class="tag">(*tag_name*)</a>
+									</view:post_tags>
+								</box:post_tags>
+							</div>
+            </div>
+        </div>
+        <div class="row comments">
+            <h2>دیدگاه‌ها ((*post_comment_count*))</h2>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <box:post_comments>
+                    <view:post_comments>
+                        <div class="comment-wrap">
+                            <check:if comment_website>
+                                <a href="(*comment_website*)" class="photo">
+                                    <div class="avatar" style="background-image: url('(*comment_avatar*)')"></div>
+                                    <div class="comment-name">(*comment_fullname*)</div>
+                                </a>
+                            </check:if>
+                            <check:if not comment_website>
+                                <div href="#" class="photo">
+                                    <div class="avatar" style="background-image: url('(*comment_avatar*)')"></div>
+                                    <div class="comment-name">(*comment_fullname*)</div>
+                                </div>
+                            </check:if>
+                            <div class="comment-block">
+                                <div class="comment-text">(*comment_body*)</div>
+                                <div class="bottom-comment">
+                                    <div class="comment-date">(*comment_date*)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </view:post_comments>
+                </box:post_comments>
+                <div class="send-comment">
+                    (*comment_add_form*)
+                </div>
+            </div>
+        </div>
+    </div>
+	</box:post_detail>
+
+<box:page_detail>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" id="header" style="background:linear-gradient(rgba(44, 62, 80,.5), rgba(44, 62, 80,.5)), url('http://bayanbox.ir/view/2910016263903989039/default-bg-2.jpg') no-repeat fixed bottom;background-size:cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>(*page_title*)</h1>
+                        <!--<h2 class="subheading">Problems look mighty small from 150 miles up</h2>-->
+                        <!--<span class="meta">نوشته‌شده در</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="post-content">
+                (*page_content*)
+							</div>
+            </div>
+        </div>
+    </div>
+</box:page_detail>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- Pager -->
+            <box:pagination>
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">نوشته‌های قدیمی‌تر ←</a>
+                    </li>
+                </ul>
+            </box:pagination>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!--<ul class="list-inline text-center">
+                    <li>
+                        <a href="https://github.com/mmnaderi">
+                            <div class="footer-icon">
+                                <i class="icon-github"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://gitlab.com/mmnaderi">
+                            <div class="footer-icon">
+                                <i class="icon-gitlab"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://telegram.me/mmnaderi">
+                            <div class="footer-icon">
+                                <i class="icon-telegram"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/mmnaderi.ir">
+                            <div class="footer-icon">
+                                <i class="icon-instagram"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>-->
+                <p class="copyright text-muted">نیروگرفته فقط از <strong>خدا</strong> | ممنون از <a href="http://blog.ir">بلاگ.ir</a>
+									<br>بعضی از حقوق این بلاگ محفوظ است.
+							</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+		<box:messages>
+			<view:messages>
+				<div class="message">
+					<div class="item_(*message_type*)">
+						<div class="icon"></div>
+						(*message*)
+					</div>
+				</div><!-- /align -->
+			</view:messages>
+		</box:messages>
+
+
+
+	<div id="target-content">
+  <a href="#" class="close"></a>
+  <div id="target-inner">
+<box:categories>
+<ul class="list">
+  <li>
+    <a>دسته‌بندی‌ها</a>
+      <ul>
+				<view:categories>
+        <li>
+          <a href="(*category_link*)">(*category_name*)</a>
+					<check:if category_children>
+            <ul>
+							<view:category_children>
+              <li>
+                <a href="(*category_link*)">Code</a>
+                  <!--<ul>
+                    <li>
+                      <a href="#">Html</a>
+                    </li>
+                  </ul>-->
+              </li>
+							</view:category_children>
+            </ul>
+					</check:if>
+        </li>
+				</view:categories>
+      </ul>
+  </li>
+</ul>
+		</box:categories>
+  </div>
+</div>
+
+<box:stat>
+<div id="target-content2">
+  <a href="#" class="close"></a>
+  <div id="target-inner">
+<view:stat>
+<table class="stats">
+<tbody>
+				<tr>
+					<td>(*stat_title*)</td>
+					<td>(*stat_value*)</td>
+				</tr>
+	</tbody>
+</table>
+</view:stat>
+  </div>
+</div>
+</box:stat>
+
+</body></html>
